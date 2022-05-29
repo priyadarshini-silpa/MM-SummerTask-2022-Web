@@ -8,5 +8,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #000;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.weekly {
+    margin-left: 20;
+}
+
+.SearchBox {
+    margin: 20;
+}
+
+.articles{
+    margin: auto;
 }

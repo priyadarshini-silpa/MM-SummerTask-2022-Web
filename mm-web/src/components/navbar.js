@@ -17,19 +17,22 @@ function Navbar() {
           <img src={Logo}/>
           <div className='hiddenLinks'>
             <Link to ="/"> Home</Link>
-            <Link to ="/about"> About</Link>
-            <Link to ="/trending"> Trending</Link>
-            <Link to ="/contact"> Contact Us</Link> 
+            <Link to ="/About"> About</Link>
+            <Link to ="/Login"> Login</Link>
+            <Link to ="/contact"> Contact Us</Link>
           </div>
         </div>
         <div className="rightSide">
           <Link to ="/"> Home</Link>
-          <Link to ="/about"> About</Link>
-          <Link to ="/trending"> Trending</Link>
+          <Link to ="About"> About</Link>
+          <Link to ="/Login"> Login</Link>
           <Link to ="/contact"> Contact Us</Link>
           <button onClick ={showNavbar}>
             <ReorderIcon/>
           </button>
+        </div>
+        <div>
+
         </div>
     </div>
   )

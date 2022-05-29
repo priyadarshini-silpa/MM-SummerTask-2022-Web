@@ -10,15 +10,16 @@ function Footer() {
   return (
     <div className="footer">
         <div className="socialMedia">
-            <InstagramIcon/>
-            <FacebookIcon/>
-            <GitHubIcon/>
-            <LinkedInIcon/>
-            <TwitterIcon/>
+            
+            <a target="_blank" href="https://www.instagram.com/mondaymorningnitrofficial/?hl=en"><InstagramIcon/></a>
+            <a target="_blank" href="https://www.linkedin.com/company/monday-morning-the-official-student-media-body-of-nit-rourkela/mycompany/"><LinkedInIcon/></a>
+            <a target="_blank" href="https://www.facebook.com/mondaymorningnitr/"><FacebookIcon/></a>
+            <a target="_blank" href="https://github.com/Monday-Morning"><GitHubIcon/></a>
+            <a target="_blank" href="https://twitter.com/mmnitrkl?lang=en"><TwitterIcon/></a>
         </div>
         <p>&copy; 2022 Monday Morning</p>
     </div>
   )
 }
 
-export default Footer
+export default Footer;
