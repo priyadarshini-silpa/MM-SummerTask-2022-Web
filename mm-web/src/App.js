@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import Article from "./pages/Article";
+import Admin from "./pages/Admin";
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App(){
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/about' element={<About />} />
         <Route exact path='/article' element={<Article />} />
+        <Route exact path='/admin' element={<Admin />} />
         </Routes>
       <Footer/>
     </Router>
