@@ -11,7 +11,6 @@ function Navbar() {
   const showNavbar = () => {
       setShowLinks(!showLinks);
   }
-  const isAdmin=false;
   return (
     <div className="navbar">
         <div className="leftSide" id={showLinks ? "open" : "close" }>
@@ -33,7 +32,7 @@ function Navbar() {
           </button>
         </div>
         <div>
-          
+
         </div>
     </div>
   )
