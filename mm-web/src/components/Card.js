@@ -1,23 +1,20 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import {Link} from 'react-router-dom'
 
-const ExpandMore = styled((props) => {
+/*const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
@@ -26,56 +23,50 @@ const ExpandMore = styled((props) => {
   transition: theme.transitions.create('transform', {
     duration: theme.transitions.duration.shortest,
   }),
-}));
+}));*/
+/*const LikeButton = () => {
+  const [likes, setLikes] = useState(100);
+  const [isClicked, setIsClicked] = useState(false);
 
-export default function RecipeReviewCard() {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const handleClick = () => {
+    if (isClicked) {
+      setLikes(likes - 1);
+    } else {
+      setLikes(likes + 1);
+    }
+    setIsClicked(!isClicked);
   };
 
   return (
+    <button className={ `like-button ${isClicked && 'liked'}` } onClick={ handleClick }>
+      <span className="likes-counter">{ `Like | ${likes}` }</span>
+    </button>
+  );
+};*/
+export default function ArticleCard() {
+  return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <ArrowForwardIosIcon />
-          </IconButton>
-        }
-        title="article-name"
-        subheader="September 14, 2021"
+        title="article-name-id-xx"
+        subheader="month XX, 20XX"
       />
       <CardMedia
         component="img"
-        height="300"
-        image="../media/mmLogo.png"
-        /*alt="Covid Situation"*/
+        height="200"
+        image="./media/mm-logo.jpg"
+        alt="alternate-text"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Author1,Author2
+          Author1, Author2
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="like">
-          <FavoriteIcon />
+          <FavoriteIcon/>
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <Link to ="/Article">Read More</Link>
+        <Link to ="/Article"><ArrowForwardIosIcon /></Link>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          
-        </CardContent>
-      </Collapse>
     </Card>
   );
 }

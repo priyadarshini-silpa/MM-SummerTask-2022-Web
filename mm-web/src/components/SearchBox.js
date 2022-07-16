@@ -9,12 +9,12 @@ export default function ComboBox() {
       id="combo-box-demo"
       options={filterCategory}
       sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Filter" />}
+      renderInput={(params) => <TextField {...params} label="Search" />}
     />
   );
 }
 
 const filterCategory= [
-  { label: 'filter1', year: 1994 },
-  { label: 'filter2', year: 1972 },
+  { label: 'filter1'},
+  { label: 'filter2'},
 ];
